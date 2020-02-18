@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 
@@ -17,6 +17,12 @@
 
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
+
+  <!--Use Datatable -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+
 
 </head>
 
@@ -137,21 +143,21 @@
           </div>
         </div>
 
-        <!-- Portfolio Item 5 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal">
-            <a class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" href="#">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-arrow-alt-circle-right fa-3x"></i>
-              </div>
-            </a>
-            <img class="img-fluid" src="img/portfolio/ban.png" alt="">
+       <!-- Portfolio Item 5 -->
+       <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item mx-auto" data-toggle="modal">
+          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
           </div>
+          <img class="img-fluid" src="img/portfolio/ban.png" alt="">
         </div>
+       </div>
 
         <!-- Portfolio Item 6 -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-arrow-alt-circle-right fa-3x"></i>
@@ -185,13 +191,216 @@
 
       <!-- About Section Content -->
       <div style="text-align:center">
-      <p class="masthead-subheading font-weight-light mb-0">2020 경기고등학교 컴퓨터부 CE-L 동아리 부원 모집 중입니다.
-        <br>경기고등학교 컴퓨터 동아리 CE-L은 "누구 하나 빠지지 않고 지식을 배워가는 동아리" 를 목표로 합니다.
-        <br>자습이 목적이라면 우리 동아리와는 맞지 않습니다.
-        <br>바로가기의 동아리 가입 신청을 눌러 동아리에 지원해주세요!
-      </p>
-      </div>
-
+      <p class="masthead-subheading font-weight-light mb-0"><p style="text-align: left;"><strong><span style="font-size: 
+        13px;">&lt;경기고등학교 컴퓨터부 CE-L 동아리 부원 모집&gt;</span></strong></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">경기고등학교 컴퓨터 동아리 CE-L은 "누구하나 빠지지 않고 지식을 배워가는 동아리"를 목표로 합니다.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">동아리 내에서의 자습을 목적으로 지원하시는 분들은 뒤로가기를 눌러주세요 :)</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&lt;일정&gt;</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">1. 지원서 마감 : 3월 5일(목요일) 밤 11시 59분까지</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">2. 지원서 합격 여부 확인 : 3월 6일 아침 8시 공개, CE-L 홈페이지에서 확인 가능</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">3. 면접 일정 : 3월 9일 ~ 10일 진행, 원하는 시간대에 1회 참석. 장소와 시간은 홈페이지 공지</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">4. 최종 결과 : 개별 면접 이후 3월 11일 아침 8시 홈페이지 공개 &amp; 개별 연락</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&lt;지원분야&gt;</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;// Maker</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">#Maker로 동아리 활동을 함께하게 된다면...</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">1. 경기고등학교의 축제, 화동제를 "직접 기획부터 메이킹, 부스준비, 부스운영"까지 함께할거에요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">2. 단순히 부차장이 하라는대로 하는 동아리 부원이 아닌, 모두 같이 활동하는 동아리 부원이 될 거에요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">3. 빵빵한 생기부의 양으로 목표하는 대학의 과에 진학할 수 있게 도움이 될 거에요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">4. [선택과목:정보]를 선택했다면 정보과목의 등급을 높이는데에도 매우 좋을거에요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">5. 이공계 동아리 발표대회에 함께 나가 비교과 시간이 인정되고, 더 나아가 수상경력까지 얻을 수 있는 기회가 있습니다.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">#이런 역량이 있는 분과 함께하고 싶어요</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">1. 어느정도 C언어를 할 줄 알고 컴퓨터에 대해 관심이 많은 사람</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 엄청 못해도 상관 없습니다! (printf라는 함수를 알고 있는 정도면 할 줄 아는거에요!)&nbsp;</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 동아리 활동을 함께하면서 성장할 수만 있다면 됩니다!</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">2. 자신이 기획한 컨텐츠를 끝까지 책임질 수 있는 사람</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 화동제 컨텐츠를 한 번 기획하게 되면 많은 돈이 투자되기 때문에 기회비용이 생기더라도 꼭 책임질 수 있는 책임감과 끈기가 있으면 좋아요</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">3. 주변 사람들과 인과관계가 원만한 사람</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 회의하는데 지장만 없을 정도면 좋습니다!</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">#우대조건 (자격 필수 요건이 아닙니다)</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 아두이노나 라즈베리파이를 다뤄본 적 있는 사람</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;*우대조건을 만족할 경우 응답에 내용을 넣어주세요*</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;// Learner</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">#Learner로 동아리 활동을 함께하게 된다면...</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">1. C언어를 배워 C언어의 꽃이라고 할 수 있는 배열까지 마스터하게 될 거에요.&nbsp;</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">2. 매시간 온라인 테스트를 통해 배운내용을 확인하여, 못 따라가는 사람은 없는 동아리 시간이 될 거에요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">3. tinkercad를 통해 3D모델링을 배우고, 직접 만든 모델을 3D프린터로 뽑아 집으로 가져가는 활동도 있을 예정이에요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">4. 무엇보다 확실한 생기부로 목표하는 대학의 과에 진학할 수 있도록 도와줄거에요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">5. [선택과목:정보]의 등급을 높이는데에도 매우 기여를 할거에요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">6. 이공계 동아리 발표대회에 함께 나가 비교과 시간이 인정되고, 더 나아가 수상경력까지 얻을 수 있는 기회가 있습니다.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">#이런 역량이 있는 분과 함께하고 싶어요</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">1. 컴퓨터 프로그래밍 언어에 대해 아예 몰라도 배울 열정이 있는 사람</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 진짜 C언어라는 존재가 있다는 사실을 방금 이 글을 보고 알았어도 괜찮아요. 배우고자 하는 열정만 있으면 됩니다!</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">2. 중간에 학습을 포기하지 않을 사람</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 아무리 쉽게 가르쳐도 분명히 배우는 과정 속에서는 딱 한 번 어려운 부분이 존재할거에요. 그때 잘 이겨낼 수 있었으면 좋겠어요!</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">3. 동아리 시간에 컴퓨터 인터넷을 열어줬다고 다른 사이트로 빠지지 않을 사람</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 앞의 메인컴퓨터에서는 다들 무슨 화면을 보고 있는지 다 보여요 O_O 게임을 깔아서 한다던지 웹툰을 본다던지 하는 행동은 자제할 수 있는 사람이었으면 합니다.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">#우대조건 (자격 필수 요건이 아닙니다)</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 타자가 180타 이상인 사람 (*기준으로 선정된 이유 : 우리학교에서 정보과목을 선택할 경우 180타가 만점으로 수행평가 A입니다!)&nbsp;</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;*우대조건을 만족할 경우 응답에 내용을 넣어주세요*</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">#꼭 이렇지만은 않아요</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 화동제에서 아예 제외되는게 아닙니다! 원한다면, 화동제 부스 준비와 운영을 할 수 있어요!</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&lt;지원 방법 및 선발 절차는?&gt;</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">1. 서류 심사</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 아래의 설문조사 양식을 따라 자신에 대해 설명하면 됩니다!</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">2. 면접심사&nbsp;</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- CE-L의 부장과 차장 2인, 총 3명과 함께 대면 면접을 아주 짧게 진행합니다.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 기본적으로 질문은 작성해주신 내용을 바탕으로 진행됩니다.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 이 작성 설문지를 먼저 작성한 순서대로 면접을 진행합니다! (원한다면, 순서를 뒤로 미룰 수도 있습니다)</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">3. 최종발표</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 컴퓨터부 CE-L 홈페이지를 통해 합격자를 발표함과 동시에 개별 대면 or 문자 연락까지 해줍니다!</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 발표일 기준으로 24시간 이내 동아리 회비를 제출하지 않을 경우, 예비 대기자에게 기회가 넘어갈 수 있습니다.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">&nbsp;- 만약, 최종합격 후 우리 동아리에 가입하고 싶지 않을 경우 마음이 결정되는대로 최대한 빨리 말해주세요 :)</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">많은 지원 부탁드립니다. 감사합니다 :)</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">경기고등학교 컴퓨터 동아리 CE-L과 함께 하고 싶으시다면 </span>
+    <a href="https://forms.gle/drTJBG2GDM4ekQK78"><span style="font-size: 
+        13px;">지원서 작성</span></a><span style="font-size: 
+        13px;">을 시작해주세요.</span></p>
+  <p style="text-align: left;"><span style="font-size: 
+        13px;">
+      <br>
+    </span></p>
+  <p>
+    <br style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: NanumGothic, 나눔고딕, sans-serif; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+  </p>
 
     </div>
   </section>
@@ -248,6 +457,64 @@
     <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
       <i class="fa fa-chevron-up"></i>
     </a>
+  </div>
+  <!-- Portfolio Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">서류 합격자 명단</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Table -->
+                <table id="table_id" class="table table-striped table-bordered" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th>학번</th>
+                          <th>이름</th>
+                          <th>지원분야</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>10802</td>
+                          <td>김동현</td>
+                          <td>Leader</td>
+                      </tr>
+                      <tr>
+                          <td>10000</td>
+                          <td>김에듀</td>
+                          <td>Support</td>
+                      </tr>
+                  </tbody>
+                </table>
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">1차 지원서류 합격을 진심으로 축하드립니다.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Bootstrap core JavaScript -->
