@@ -111,7 +111,7 @@
 
         <!-- Portfolio Item 2 -->
         <div class="col-md-6 col-lg-4">
-          <!--공개시 date-target="#portfolioModal2 data-toggle 뒤로 추가"-->
+          <!--공개시 data-target="#portfolioModal2 data-toggle 뒤로 추가"-->
           <div class="portfolio-item mx-auto" data-toggle="modal">
             <a class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" onclick="alert('2020년 6월 30일 오후 5시 발표')">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -124,8 +124,8 @@
 
         <!-- Portfolio Item 3 -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal">
-            <a class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" href="https://docs.google.com/spreadsheets/d/1zpxMy3YVnKbUD_gouk84IKHyML0t_XmKvMp87eqkwV0/edit?usp=sharing">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+            <a class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-arrow-alt-circle-right fa-3x"></i>
               </div>
@@ -287,11 +287,44 @@
                   </tbody>
                 </table>
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">1차 지원서류 합격을 진심으로 축하드립니다.</p>
+                <p class="mb-5">합격을 진심으로 축하드립니다.</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
-                  Close Window
+                  Close
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">동아리 활동 계획</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="img/plantable.png" alt="">
+                <!-- Portfolio Modal - Text -->
               </div>
             </div>
           </div>
