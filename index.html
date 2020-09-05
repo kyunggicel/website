@@ -23,24 +23,36 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
-  
-  <style>
-    .loginform {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+  <script language="JavaScript">
+  function Check(){
+    if(document.loginverify.StudentID.value =="10101" && document.loginverify.phonenumber.value =="6917"){
+    $("#10101modal").modal();}
+    else if(document.loginverify.StudentID.value =="10613" && document.loginverify.phonenumber.value =="3356"){
+    $("#10613modal").modal();}
+    else if(document.loginverify.StudentID.value =="10622" && document.loginverify.phonenumber.value =="5099"){
+    $("#10622modal").modal();}
+    else if(document.loginverify.StudentID.value =="10807" && document.loginverify.phonenumber.value =="1506"){
+    $("#10807modal").modal();}
+    else if(document.loginverify.StudentID.value =="11109" && document.loginverify.phonenumber.value =="7208"){
+    $("#11109modal").modal();}
+    else if(document.loginverify.StudentID.value =="11207" && document.loginverify.phonenumber.value =="5818"){
+    $("#11207modal").modal();}
+    else if(document.loginverify.StudentID.value =="11208" && document.loginverify.phonenumber.value =="7079"){
+    $("#11208modal").modal();}
+    else if(document.loginverify.StudentID.value =="11212" && document.loginverify.phonenumber.value =="7235"){
+    $("#11212modal").modal();}
+    else if(document.loginverify.StudentID.value =="11222" && document.loginverify.phonenumber.value =="1821"){
+    $("#11222modal").modal();}
+    else if(document.loginverify.StudentID.value =="11303" && document.loginverify.phonenumber.value =="6750"){
+    $("#11303modal").modal();}
+    else{
+      alert("해당하는 데이터가 없습니다.");
+      window.location.href = 'http://ce-l.kr';
     }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-  
+  }
+
+  </script>
 
 </head>
 
@@ -61,7 +73,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">MENU</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">RESULT</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">STATES</a>
           </li>
           </li>
         </ul>
@@ -128,13 +140,13 @@
         <!-- Portfolio Item 2 -->
         <div class="col-md-6 col-lg-4">
           <!--공개시 data-target="#portfolioModal2" data-toggle 뒤로 추가"-->
-          <div class="portfolio-item mx-auto" data-toggle="modal">
-            <a class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" href="https://docs.google.com/forms/d/e/1FAIpQLSdEXm7wRbW817YPGOdy2J9X149DYaoKrd1g0ewNdaqzAEAkHQ/viewform?usp=sf_link" target="_blank">         
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+            <a class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">         
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-arrow-alt-circle-right fa-3x"></i>
               </div>
             </a>
-            <img class="img-fluid" src="img/portfolio/1head.png" alt="">
+            <img class="img-fluid" src="img/portfolio/1headopen.png" alt="">
           </div>
         </div>
 
@@ -162,7 +174,7 @@
     <div class="container">
 
       <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-white">RESULT</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-white">STATES</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -179,13 +191,14 @@
       <div class ="col-md-6 col-lg-4" style="float:center; margin:0 auto;">
       <p class="masthead-subheading font-weight-light mb-0"><p style="text-align: mid;"><span style="font-size: 15px;">
         <h1 class="h3 mb-3 font-weight-normal">SIGN IN!</h1>
-        <form action="jsp/loginverify.jsp" method = "post">
+        <form name="loginverify">
         <label for="inputStudentID" class="sr-only">학번</label>
-        <input type="number" id="inputStudentID" class="form-control" placeholder="학번" required="" autofocus=""><br>
+        <input type="number" id="inputStudentID" class="form-control" placeholder="학번" required="" autofocus="" name="StudentID"><br>
         <label for="inputPassword" class="sr-only">전화번호 뒷자리 4자리</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="전화번호 뒷자리 4자리" required=""><br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Check">확인하기</button>
-      </form>
+        <input type="password" id="inputPassword" class="form-control" placeholder="전화번호 뒷자리 4자리" required="" name="phonenumber"><br>
+        <input type="button"  class="btn btn-lg btn-primary btn-block" value="확인하기" onclick="Check()">
+        </form>
+        <br>* LEARNER의 성취도 확인을 도와줍니다. <br>* 활동을 한 LEARNER만 확인 가능합니다.
       <p style="text-align: left;"><span style="font-size: 13px;">
     </span></p>
   <p>
@@ -254,7 +267,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">1학년 추가 합격자 명단</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">1학년 대표 선발 명단</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -274,19 +287,19 @@
                   </thead>
                   <tbody>
                       <tr>
-                          <td>10613</td>
-                          <td>서동현</td>
-                          <td>Learner</td>
+                          <td>11404</td>
+                          <td>김선우</td>
+                          <td>Maker</td>
                       </tr>
                       <tr>
-                          <td>10101</td>
-                          <td>강승원</td>
+                          <td>11222</td>
+                          <td>이창현</td>
                           <td>Learner</td>
                       </tr>
                   </tbody>
                 </table>
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">추가 합격을 진심으로 축하드립니다. </p>
+                <p class="mb-5">1학년 대표가 되신 것을 진심으로 축하드립니다.<br>앞으로 2학년을 도와 열심히 일해주길 바랍니다. </p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close
@@ -332,6 +345,359 @@
       </div>
     </div>
   </div>
+
+
+  <!--LEARNER MODALS-->
+  <div class="portfolio-modal modal fade" id="10101modal" tabindex="-1" role="dialog" aria-labelledby="10101modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">강승원의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/10101.png" alt="">
+                <img class="img-fluid" src="results/DAY2/10101.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="portfolio-modal modal fade" id="10613modal" tabindex="-1" role="dialog" aria-labelledby="10613modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">서동현의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/10613.png" alt="">
+                <img class="img-fluid" src="results/DAY2/10613.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="10622modal" tabindex="-1" role="dialog" aria-labelledby="10622modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">이지훈의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/10622.png" alt="">
+                <img class="img-fluid" src="results/DAY2/10622.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="10807modal" tabindex="-1" role="dialog" aria-labelledby="10807modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">김선준의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/10807.png" alt="">
+                <img class="img-fluid" src="results/DAY2/10807.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="11109modal" tabindex="-1" role="dialog" aria-labelledby="11109modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">성재원의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/11109.png" alt="">
+                <img class="img-fluid" src="results/DAY2/11109.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="11207modal" tabindex="-1" role="dialog" aria-labelledby="11207modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">김도엽의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/11207.png" alt="">
+                <img class="img-fluid" src="results/DAY2/11207.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="11208modal" tabindex="-1" role="dialog" aria-labelledby="11208modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">김윤재의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/11208.png" alt="">
+                <img class="img-fluid" src="results/DAY2/11208.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="11212modal" tabindex="-1" role="dialog" aria-labelledby="11212modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">박준영의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/11212.png" alt="">
+                <img class="img-fluid" src="results/DAY2/11212.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="11222modal" tabindex="-1" role="dialog" aria-labelledby="11222modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">이창현의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/11222.png" alt="">
+                <img class="img-fluid" src="results/DAY2/11222.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="11303modal" tabindex="-1" role="dialog" aria-labelledby="11303modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">김우진의 현재상태</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid" src="results/title.png" alt="">
+                <img class="img-fluid" src="results/DAY1/11303.png" alt="">
+                <img class="img-fluid" src="results/DAY2/11303.png" alt="">
+                <!-- Portfolio Modal - Text -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
