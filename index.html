@@ -23,7 +23,23 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+  
+  <style>
+    .loginform {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
 
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
   
 
 </head>
@@ -159,15 +175,23 @@
 
       <!-- About Section Content -->
       <div style="text-align:center">
+
+      <div class ="col-md-6 col-lg-4" style="float:center; margin:0 auto;">
       <p class="masthead-subheading font-weight-light mb-0"><p style="text-align: mid;"><span style="font-size: 15px;">
-        CE-L LEARNER들의 활동등급을 발표할 예정입니다. 준비중.
-  <p style="text-align: left;"><span style="font-size: 
-        13px;">
-      <br>
+        <h1 class="h3 mb-3 font-weight-normal">SIGN IN!</h1>
+        <form action="loginverify.jsp" method = "post">
+        <label for="inputStudentID" class="sr-only">학번</label>
+        <input type="number" id="inputStudentID" class="form-control" placeholder="학번" required="" autofocus=""><br>
+        <label for="inputPassword" class="sr-only">전화번호 뒷자리 4자리</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="전화번호 뒷자리 4자리" required=""><br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Check">확인하기</button>
+      </form>
+      <p style="text-align: left;"><span style="font-size: 13px;">
     </span></p>
   <p>
     <br style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: NanumGothic, 나눔고딕, sans-serif; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
   </p>
+</div>
 
     </div>
   </section>
